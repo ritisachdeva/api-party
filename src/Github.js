@@ -1,21 +1,22 @@
 import React, { Component } from 'react'
-import {Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 import './Github.css'
+import GithubUser from './GithubUser'
 
 class Github extends Component {
-    state = {
-        username:'',
-    }
+  state = {
+    username: '',
+  }
 
-    handleChange = (ev) => {
-        this.setState({username: ev.target.value})
-    }
+  handleChange = (ev) => {
+    this.setState({ username: ev.target.value })
+  }
 
-    handleSubmit = (ev) => {
-        ev.preventDefault()
-        this.props.history.push(`/github/${this.state.username}`)
-    }
+  handleSubmit = (ev) => {
+    ev.preventDefault()
+    this.props.history.push(`/github/${this.state.username}`)
+  }
 
   render() {
     return (
@@ -27,18 +28,18 @@ class Github extends Component {
         />
         <form onSubmit={this.handleSubmit}>
           <div>
-            <input 
-                type="text"
-                value={this.state.username}
-                onChange={this.handleChange}
+            <input
+              type="text"
+              value={this.state.username}
+              onChange={this.handleChange}
             />
           </div>
           <div>
             <button type="submit">Look up GitHub user</button>
           </div>
         </form>
-            <Route path="/github/:username" render={(props) => <h3>You entered {props.match.params.username}! </h3>} />
-            <Route exact path="/github" render ={() => <h3> Please enter a username to search GitHub </h3>} />
+        <Route path="/github/:username" component={GithubUser} />
+        <Route exact path="/github" render={() => <h3>Please enter a username to search on GitHub.</h3>} />
       </div>
     )
   }
