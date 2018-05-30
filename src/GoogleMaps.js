@@ -24,8 +24,8 @@ class GoogleMaps extends Component {
                 <button type="submit">Look up a place</button>
             </div>
             </form>
-            <Route path="/github/:username" component={GoogleMaps} />
-            <Route exact path="/github" render={() => <h3>Please enter a username to search on GitHub.</h3>} />
+            <Route path="/googlemaps/:username" component={GoogleMaps} />
+            <Route exact path="/googlemaps" render={() => <h3>Please enter a place to search on GoogleMaps.</h3>} />
             </div>
         )
     }
