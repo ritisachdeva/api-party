@@ -39,7 +39,8 @@ class Google extends Component {
           </div>
         </form>
         <Route path="/google/:googlePlace" component={GoogleMaps} />
-        <Route exact path="/google" render={() => <h3>Please enter a username to place on Google Maps.</h3>} />
+        <Route exact path="/google" render={() => <h3>Please enter a place to search on Google Maps.</h3>} />
+        <div className="map"></div>
       </div>
     )
   }

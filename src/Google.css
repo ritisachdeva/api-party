@@ -1,3 +1,8 @@
+.Google {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .Google .logo {
     margin-top: 30px;
     max-height: 300px;
@@ -27,4 +32,10 @@
     margin-bottom: 50px;
     background-color: #0184be;
     font-family: "Gentium Book Basic", serif;
+  }
+
+  .Google .map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;    
   }
