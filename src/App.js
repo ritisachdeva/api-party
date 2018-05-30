@@ -5,7 +5,7 @@ import './App.css'
 import Github from './Github'
 import Nasa from './Nasa'
 import Homework from './Homework'
-import GoogleMaps from './GoogleMaps'
+import Google from './Google'
 
 class App extends Component {
   render() {
@@ -23,7 +23,7 @@ class App extends Component {
             <NavLink to="/nasa">NASA API</NavLink>
           </li>
           <li>
-            <NavLink to="/googlemaps">Google Maps API</NavLink>
+            <NavLink to="/google">Google Maps API</NavLink>
           </li>
           <li>
             <NavLink to="/homework">Homework</NavLink>
@@ -32,7 +32,7 @@ class App extends Component {
         <Switch>
           <Route path="/github" component={Github} />
           <Route path="/nasa" component={Nasa} />
-          <Route path="/googlemaps" component={GoogleMaps} />
+          <Route path="/google" component={Google} />
           <Route path="/homework" component={Homework} />
           <Route render={() => <p>To get started, click one of the links above.</p>} />
         </Switch>
